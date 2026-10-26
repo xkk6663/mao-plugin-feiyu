@@ -1,0 +1,22 @@
+{
+  "name": "mao-plugin-feiyu",
+  "version": "1.0.0",
+  "description": "大肥鱼插件包 —— 桌宠对接云端 AstrBot persona（多模态对话 / 点歌 / 跨设备记忆），界面与后端模块随插件走，经 Mao 插件市场按需安装",
+  "keywords": [
+    "mao-plugin",
+    "feiyu",
+    "astrbot",
+    "desktop-pet",
+    "multimodal"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xkk6663/mao-plugin-feiyu.git"
+  },
+  "files": [
+    "frontend/",
+    "backend/",
+    "docs/"
+  ]
+}
