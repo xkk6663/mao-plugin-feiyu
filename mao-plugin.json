@@ -3,7 +3,7 @@
   "id": "feiyu",
   "agentId": "cloud_feiyu",
   "name": "大肥鱼",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "大肥鱼：桌宠对接云端 AstrBot persona（多模态对话 / 每日翻唱 / 跨设备传输 / Live2D 形象）",
   "author": "xkk6663",
   "accent": "#E08A9B",
@@ -11,6 +11,10 @@
   "frontend": {
     "distPlugins": "frontend/dist-plugins",
     "distAssets": "frontend/dist-assets"
+  },
+  "backend": {
+    "package": "backend",
+    "provides": ["cloud_feiyu", "companion.cover_service"]
   },
   "assets": [
     { "src": "assets/da-feiyu", "dest": "live2d-pet/models/da-feiyu" },
