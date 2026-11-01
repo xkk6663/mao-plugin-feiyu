@@ -28,13 +28,27 @@
 frontend/            Mao 插件市场前端件（落盘到 澪Agent应用/dist/plugins/feiyu/）
   manifest.js          插件声明（agentId=cloud_feiyu / nav host 模式 / settingsTab）
   feiyu-panel.js       设置页面板
+  src/                 宿主对话页 Vue 源码（FeiyuChatPage / CompanionPage / useCompanionChat 等）
+  dist-assets/         主仓库 Vue 构建的对应编译产物（hash 命名，供对照/回填）
 backend/cloud_feiyu/ 后端模块（落盘到 backend/app/cloud_feiyu/）
   client.py            AstrBot Open API 客户端（对话/附件/文件，1462 行）
   device.py            设备上下文
   devices.py           设备上线通知
   mcp_routes.py        MCP 路由
-docs/                拆分方案与耦合地图
+  relay_service.py     中转（relay）服务
+  transfer_receiver.py 跨设备传输投递（crosssend → 桌宠落库）
+backend/companion/
+  cover_service.py     翻唱服务（每日翻唱 / 点歌翻唱管线，主仓 app/companion/cover_service.py）
+assets/
+  da-feiyu/            大肥鱼 Live2D 桌宠模型（33MB，主仓 dist/live2d-pet/models/da-feiyu）
+  da-feiyu.json        桌宠台词包
+docs/                拆分方案、耦合地图、功能总览与协议文档
 ```
+
+> **2026-11-01 v1.1.0 同步**：主仓库（dsh-live2d-mao）v1.4.0 起对大肥鱼做 git 级移出，
+> 本仓收编全部大肥鱼源码（含 10-29/10-30 的 transfer_receiver 落库、200 错误体防呆、
+> 每日翻唱进度通路等修复）。主仓库工作区保留一份**不入库的本地运行副本**，
+> 本地桌宠功能不受影响；阶段 2/3 落地后改由市场安装本包。
 
 ## 与桌宠主体的关系
 
